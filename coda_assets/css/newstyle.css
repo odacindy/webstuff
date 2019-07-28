@@ -1,0 +1,27 @@
+
+body {
+  /* commented out
+  font-family: courier;  
+  font-size: 2em;
+  */
+  margin: 0px;
+ 
+}
+
+.lines {
+  stroke: red;
+  stroke-width: 10;
+}
+
+/* select all items that have the class "codaHighlighted" (or whatever 
+   classname you choose) */
+
+.codaHighlighted {
+  color: red;
+}
+
+
+.lines path {
+  stroke:  green;
+  stroke-linejoin: round;
+}

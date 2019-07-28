@@ -1,0 +1,11 @@
+How to start/restart/stop apache web server
+sudo su root
+apachectl start
+apachectl restart
+apachectl stop
+
+I am currently no longer running this since I am using the Chrome Web Server App instead.
+
+====
+Actually now I am using the Chrome Web Server App and HTTPS Everywhere.
+Need to go to 127.0.0.1:8887

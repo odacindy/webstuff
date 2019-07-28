@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="../css/newstyle.css" type="text/css">
+
+</head>
+
+
+<body>
+
+  <h1>Shapes with SVG and CSS</h1>
+  <ul>
+    <li>2012 nissan</li>
+    <li class="codaHighlighted">2009 ford</li>
+    <li>2009 chevy</li>
+  </ul>
+
+  <!-- scalable vector graphics (SVG) -->
+  <svg width="960" height="500">
+      <g transform="scale(1.5)">
+    
+        <!-- r is radius.  if use radius larger than 400, When you include an HTML 
+             file with an <iframe>, you don't expect the text inside to scale when 
+             you change the size of the frame. Same with SVG. By default, it will 
+             be drawn at the size specified in the code, regardless of the size of 
+             the canvas.What happens if you set the height or width (or both) to 
+             auto for these SVGs? The default size for HTML replaced elements will 
+             be used: 300px wide, 150px tall. This applies for <img>, <object> or 
+             <iframe>. The default 300x150 size also applies to inline <svg> 
+             elements within HTML documents, but that's a relatively recent 
+             consensus from the HTML5 specifications: other browsers will by 
+             default expand inline SVG to the full size of the viewport—equivalent 
+             to width: 100vw; height: 100vh; — which is the default size for SVG 
+             files that are opened directly in their own browser tab
+        -->
+        <circle cx="50" cy="50"  r="40" fill="red"></circle>
+    
+        <!-- If you want to code for a color, in google, type color picker and
+             it will give you the code -->
+        <rect x="100" y="20" width="50" height="50" fill="#bc28de"></rect>
+    
+        <!-- group using "g" translate(xPixels, yPixels)  -->
+        <g transform="translate(0,200)" fill="#adf6ff" stroke="black">
+          <circle cx="50" cy="50" r="40" stroke-width="5"></circle>
+          <rect x="100" y="25" width="50" height="50"></rect>
+        </g>
+    
+    
+    
+        <g class="lines" transform="translate(50,0)" >
+          <line x1="200" y1="20" x2="300" y2="280"></line>
+        
+          <path fill="none" d="M300 280 L350 200 L400 250 L450 230"></path>
+        </g>
+    
+        <!--  M=moveto  L=lineto  H=horizontal lineto V=vertical lineto Z=closepath, etc. --> 
+    </g> <!-- transform scale -->
+
+  </svg>
+
+<a href="../../index.html">CLICK ME TO GO HOME</a>
+</body>
+</html>

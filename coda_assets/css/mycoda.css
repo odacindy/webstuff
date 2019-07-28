@@ -1,0 +1,163 @@
+
+/*-------- RESET ---------------------------------------------------------
+ * The asterisk indicates that the stuff in the braces includes every
+ * element that you could possibly put in the CSS file
+ */
+
+*{
+    margin:         0;  /* we do this so we don't end up getting default 
+                           margins or padding for the various CSS elements.
+                           Then we can explicitly set the margin or padding
+                           in the elements where we really want to set it.
+                           This way, we don't have to fight the default 
+                           margin and padding specified for each CSS element.
+                       */
+    padding:        0;
+}
+
+#myhello {
+    color:          red;
+    font-weight:    bold;
+    font-size:      50px;
+    font-style:     italic;
+    letter-spacing: 2px;
+                 /* x   y   z (if use neg values, shadow shows up on left side */
+                 /* instead of names like yellow, we should use the CSS color codes
+                    #000000 is black, yellow if #ffff00 (but in this case you 
+                    can use the name, #ffffff is white */
+    text-shadow:    2px 2px 2px #ffff00;
+}
+
+/*-------- BODY ----------------------------------------------------------*/
+body {
+   /* #000000 is css code for black */
+   background-color: #000000;
+}
+
+/*-------- WRAPPER -------------------------------------------------------*/
+#myWrapper {
+    width:            800px;
+                   /* top right bottom left (auto-automatically centers) */
+    margin:           20px   auto     0      auto;
+}
+
+/*-------- HEADER --------------------------------------------------------*/
+header {
+    width:            auto; /* make this auto so if you change the wrapper 
+                             * width, it expands with it. Otherwise, if you
+                             * explicitly set it and it is different than
+                             * the wrapper, they will be diff widths.
+                             */
+    height:           100px;
+    /* background-color: lightblue; */
+    background-image: url("coda_header_img2.png");
+
+    /* use this feature if you want to position your image. especially if
+       you have multiple images you want in the header */
+    /* position of img    horizontal     negative val pushes_img_dwn_and_to_right */
+    /*                    xaxis-0-pixels yaxis 50 pixels
+    /* don't do now since our header height is only 100px, so if you try to
+       push it down and to the right 50px, it will wrap-around to the top
+       Look at the very end of this youtube video for more explanation of
+       this feature: https://www.youtube.com/watch?v=gtQo1zen0q8
+       plus there is more in this video: https://www.youtube.com/watch?v=UwZgvKTny7U
+    background-position:  0              -50px;
+     */
+
+         
+    /* coda_header_img2.png is placed at xaxis 0 and yaxis 0 */
+                       /* xaxis  yaxis */
+    background-position:  0      0;
+}
+
+
+/*-------- NAV BAR--------------------------------------------------------*/
+#navBar {
+    width:            auto; /* we set it to auto, so that it auto-sizes
+                             * to whatever we set the wrapper to
+                             */
+    height:           30px;
+    background-color: green;
+    margin:           0;
+    padding-top:      5px;
+
+    background-image: url("coda_header_img2.png");
+    /* coda_header_img2.png is placed at xaxis 0 and yaxis -100px since the
+       header is 100px in height */
+                       /* xaxis  yaxis */
+    /* so i'm moving the image up by 100px so that the navigation bar only
+       shows the lightBlue part of the coda_header_img2.png */
+    background-position:  0      -100px;
+}
+
+#navBar li {
+    /* makes the list items, list horizontally instead of veritically */
+    display:  inline;
+
+    /* move the list elements to the right */
+    float:            right;
+
+    /* put some padding between the list elements */
+    padding-right:    20px;
+
+    color:            yellow;
+}
+
+/* if you want to change colors only when you hover */
+#navBar a:hover {
+    color:            orange;
+}
+#navBar a {
+    color:            blue;
+    
+    /* remove underline (also called a decoration) under the link */
+    text-decoration:  none;
+}
+
+/*-------- BOX CONTENT ---------------------------------------------------*/
+#boxContent {
+    width:            800px;
+    /*height:           500px; */
+    min-height:       50 px;  /* instead of setting an explicit height,
+                               * we are setting a minimum height, so
+                               * the height of the box will adjust based
+                               * on the content
+                               */
+    background-color: yellow;
+}
+
+/*-------- CONTENT PARAGRAPH TXT------------------------------------------*/
+#contentParagraphTxt {
+    /* this margin is necessary, otherwise a paragraph will automatically
+       add a margin, which is often not desired */
+    margin:            0;
+
+    /* Moves the paragraph text so it is not at the very top of the box. 
+      It adds a little padding */
+                    /* top  right bottom left */
+    padding:           20px 0     0      20px;
+
+    /* if you want to set the same padding amount for top, right, bottom
+     * and left, you can just put one number. For example:
+    padding:           20px;  
+     */
+}
+
+/*-------- FOOTER --------------------------------------------------------*/
+footer {
+    width:            800px;
+    height:           30px;
+    background-color: pink;
+
+    /* rounds the bottom left corner */ 
+    border-bottom-left-radius: 15px;
+
+    /* rounds the bottom right corner */ 
+    border-bottom-right-radius: 15px;
+
+    background-image: url("coda_header_img2.png");
+
+    /* so i'm moving the image up by 130px so that the footer bar only
+       shows the magenta part of the coda_header_img2.png */
+    background-position:  0      -130px;
+}
